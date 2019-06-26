@@ -25,6 +25,8 @@ namespace Conviva
 
             var playerProxy = new MediaPlayerProxy(MPlayer.MediaPlayer);
             WinClient.attachPlayer(sessionId, playerProxy);
+            WinClient.setBitrate(sessionId,  1024);
+            WinClient.reportError(sessionId, "Test Error Message", WinErrorSeverity.FATAL);
         }
 
         private WinContentInfo GetEspnContentInfo()
